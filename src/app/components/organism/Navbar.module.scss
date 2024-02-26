@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background-color: #121212;
+	border-radius: 10px;
+
+	a {
+		font-size: 18px;
+	}
+}

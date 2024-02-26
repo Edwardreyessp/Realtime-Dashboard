@@ -1,15 +1,6 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-	return (
-		<main>
-			<p>navbar</p>
-			<p>title</p>
-			<p>description</p>
-			<p>buttons</p>
-			<p>example</p>
-			<p>footer</p>
-		</main>
-	);
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+	redirect('/en');
 }
