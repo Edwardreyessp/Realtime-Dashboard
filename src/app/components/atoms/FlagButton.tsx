@@ -1,8 +1,8 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
-import { IconFlagMexico, IconFlagUnitedStates } from '../utils';
 import { useEffect, useState } from 'react';
 import { useLocale } from 'next-intl';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 export const FlagButton = () => {
 	const locale = useLocale();
@@ -20,12 +20,20 @@ export const FlagButton = () => {
 			localLang === 'es'
 				? pathname.replace('/es', '/en')
 				: pathname.replace('/en', '/es');
-		router.push(newRoute);
+		router.replace(newRoute);
 	};
 
 	return (
-		<div style={{ cursor: 'pointer' }} onClick={toogleRoute}>
-			{localLang === 'es' ? <IconFlagMexico /> : <IconFlagUnitedStates />}
-		</div>
+		<span style={{ cursor: 'pointer', height: '1.5rem' }} onClick={toogleRoute}>
+			{localLang === 'es' ? (
+				<Icon icon='openmoji:flag-mexico' width='1.5rem' height='1.5rem' />
+			) : (
+				<Icon
+					icon='openmoji:flag-united-states'
+					width='1.5rem'
+					height='1.5rem'
+				/>
+			)}
+		</span>
 	);
 };

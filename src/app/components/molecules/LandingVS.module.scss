@@ -1,0 +1,55 @@
+$glove-start-right: 12rem;
+$glove-end-right: 10rem;
+
+$glove-start-left: -12rem;
+$glove-end-left: -10rem;
+
+.vs {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+
+	h1 {
+		margin: 1.5rem 1rem 0 1rem;
+	}
+
+	.boxing-glove-left {
+		position: absolute;
+		top: 0;
+		animation: move-glove-left 3s infinite ease;
+	}
+
+	.boxing-glove-right {
+		position: absolute;
+		top: 0;
+		animation: move-glove-right 3s infinite ease;
+	}
+}
+
+@keyframes move-glove-left {
+	0%,
+	80%,
+	90%,
+	100% {
+		transform: translateX($glove-start-left);
+	}
+	85%,
+	95% {
+		transform: translateX($glove-end-left);
+	}
+}
+
+@keyframes move-glove-right {
+	0%,
+	80%,
+	90%,
+	100% {
+		transform: translateX($glove-start-right);
+	}
+	85%,
+	95% {
+		transform: translateX($glove-end-right);
+	}
+}

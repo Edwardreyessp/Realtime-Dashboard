@@ -1,0 +1,78 @@
+.button {
+	display: flex;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.btn {
+	letter-spacing: 0.1em;
+	font-size: 15px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1rem;
+	border-radius: 0.3rem;
+}
+
+.fx01 {
+	color: white;
+	border: 4px solid #11843b;
+	background-color: #11843b;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+}
+
+.fx01:hover {
+	border: 4px solid #11843b;
+	background-color: white;
+	box-sizing: inset 0 0 0 4px #eee;
+}
+
+.fx01 span {
+	transition: all 0.2s ease-out;
+}
+
+.fx01:hover span {
+	color: #11a847;
+}
+
+/*Creating the light source, this is the magic*/
+.fx01::after {
+	background: #fff;
+	content: '';
+	height: 155px;
+	position: absolute;
+	left: -75px;
+	top: -50px;
+	opacity: 0.8;
+	transform: rotate(35deg);
+	width: 50px;
+	transition: all 1s cubic-bezier(0.175, 0.52, 0.165, 1);
+	z-index: 1;
+	animation: shine 3s infinite;
+}
+
+/*Hover to cause the effect*/
+.fx01:hover::after {
+	animation: none;
+	background: #fff;
+	border: 20px solid #000;
+	opacity: 0;
+	transform: rotate(0deg);
+	left: -75px;
+}
+
+@keyframes shine {
+	0%,
+	70% {
+		left: -75px;
+		transform: rotate(35deg);
+		opacity: 0.8;
+	}
+	100% {
+		left: 120%;
+		opacity: 0;
+		transform: rotate(40deg);
+	}
+}

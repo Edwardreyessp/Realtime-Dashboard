@@ -1,5 +1,9 @@
 {
 	"Index": {
 		"title": "Hola mundo!"
+	},
+	"Landing": {
+		"welcome": "¡Prepárate para la batalla musical definitiva en Spotify VS! ¡Enfrenta a tus artistas favoritos basado en datos reales! ¿Quién reinará al final? ¡Tú escoges a los retadores!",
+		"button": "¡Únete a la emoción ahora!"
 	}
 }
