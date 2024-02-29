@@ -9,14 +9,14 @@ export const LandingVS = () => {
 				className={styles['boxing-glove-left']}
 				icon='noto-v1:boxing-glove'
 				rotate={1}
-				width={'10rem'}
+				width={'100%'}
 			/>
 			<h1>VS</h1>
 			<Icon
 				className={styles['boxing-glove-right']}
 				icon='noto-v1:boxing-glove'
 				rotate={1}
-				width={'10rem'}
+				width={'100%'}
 				vFlip
 			/>
 		</section>

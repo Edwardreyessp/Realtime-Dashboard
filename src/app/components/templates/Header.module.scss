@@ -1,4 +1,5 @@
 .container {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,7 +17,7 @@
 
 	.desc {
 		margin-top: 4rem;
-		width: clamp(30rem, 50%, 40rem);
+		width: clamp(320px, min(70vw, 500px), 80%);
 		text-align: center;
 	}
 
@@ -41,6 +42,30 @@
 		img {
 			filter: opacity(0.07);
 			object-fit: cover;
+		}
+	}
+}
+
+@media screen and (max-width: 1128px) {
+	.container {
+		.imageRight {
+			left: 0;
+		}
+
+		.imageLeft {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		h1 {
+			font-size: 3rem;
+		}
+
+		.desc {
+			margin-top: 2rem;
 		}
 	}
 }
