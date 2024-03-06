@@ -105,6 +105,10 @@ h1 {
 	font-size: 5rem;
 }
 
+h2 {
+	font-size: 2rem;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;

@@ -4,6 +4,7 @@
 	},
 	"Landing": {
 		"welcome": "Get ready for the ultimate musical showdown on Spotify VS! Pit your favorite artists against each other based on real data! Who will reign supreme in the end? You choose the challengers!",
-		"button": "Join the excitement now!"
+		"button": "Join the excitement now!",
+		"introTitle": "Spotify VS: The Ultimate Musical Showdown"
 	}
 }
